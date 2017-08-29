@@ -17,11 +17,11 @@
 	
 	
 	<div class="container">
-	  <form>
+	  <form method="GET" action='/add_trade'>
 	    <div class="form-group row">
 	      <label for="tradeid" class="col-sm-2 col-form-label">Trade ID</label>
 	      <div class="col-sm-10">
-	        <input type="text" class="form-control" id="tradeid" placeholder="Trade ID">
+	        <input type="text" class="form-control" name="tradeid" placeholder="Trade ID" value="abc">
 	      </div>
 	    </div>
 	    
@@ -29,7 +29,7 @@
 	    <div class="form-group row">
 	      <label for="customerid" class="col-sm-2 col-form-label">Customer ID</label>
 	      <div class="col-sm-10">
-	        <input type="text" class="form-control" id="customerid" placeholder="Customer ID">
+	        <input type="text" class="form-control" name="customerid" placeholder="Customer ID">
 	      </div>
 	    </div>
 	    
@@ -73,8 +73,8 @@
 	          </div>
 	          <div class="form-check">
 	            <label class="form-check-label">
-	              <input class="form-check-input" type="radio" name="securityname" id="gridRadios2" value="wallmart">
-	              Wallmart
+	              <input class="form-check-input" type="radio" name="securityname" id="gridRadios2" value="walmart">
+	              Walmart
 	            </label>
 	          </div>
 	        </div>
@@ -117,14 +117,14 @@
 	    <div class="form-group row">
 	      <label for="quantity" class="col-sm-2 col-form-label">Quantity of Trade</label>
 	      <div class="col-sm-10">
-	        <input type="text" class="form-control" id="quantity" placeholder="Quantity">
+	        <input type="text" class="form-control" name="quantity" placeholder="Quantity">
 	      </div>
 	    </div>
 	    
 	    <div class="form-group row">
 	      <label for="price" class="col-sm-2 col-form-label">Price per Unit</label>
 	      <div class="col-sm-10">
-	        <input type="text" class="form-control" id="price" placeholder="Price">
+	        <input type="text" class="form-control" name="price" placeholder="Price">
 	      </div>
 	    </div>
 	    
@@ -132,9 +132,10 @@
 	    <div class="form-group row">
 	      <label for="time" class="col-sm-2 col-form-label">Timestamp</label>
 	      <div class="col-sm-10">
-	        <input type="text" class="form-control" id="time" placeholder="Time">
+	        <input type="text" class="form-control" name="time" placeholder="Time">
 	      </div>
 	    </div>
+	    <input type="submit" value="Submit">
 	  </form>
 	</div>
 </body>
