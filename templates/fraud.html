@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fraud List</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<div class="container">
+<table class="table table-striped">
+
+	<thead>
+      	<tr>
+			<th>Trade ID</th>
+			<th>Customer ID</th>
+			<th>Trade Type</th>
+			<th>Security Type</th>
+			<th>Security Name</th>
+			<th>Price</th>
+			<th>Quantity</th>
+			<th>Time</th>
+		</tr>
+    </thead>
+    <tbody>
+{% for data in fraud_data %}
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+{% for trade in data %}
+		<tr>
+			<td>{{ trade.trade_id }}</td>
+			<td>{{ trade.customer_id }}</td>
+			<td>{{ trade.trade_type }}</td>
+			<td>{{ trade.security_type }}</td>
+			<td>{{ trade.security_name }}</td>
+			<td>{{ trade.price }}</td>
+			<td>{{ trade.quantity }}</td>
+			<td>{{ trade.datetime }}</td>
+		</tr>
+{% endfor %}
+	</tbody>
+{% endfor %}
+</table>
+</div>
